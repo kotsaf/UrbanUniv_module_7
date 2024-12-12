@@ -1,7 +1,8 @@
 import os
 import time
 
-for root, dirs, files in os.walk(r'D:\Projects\H\module_7'):
+directory = r'D:\Projects\H\module_7'
+for root, dirs, files in os.walk(directory):
     for file in files:
         filepath = os.path.join(r'D:\Projects\H\module_6', 'module_6.py')
         filetime = os.path.getmtime(os.path.join(root, file))
@@ -13,5 +14,5 @@ for root, dirs, files in os.walk(r'D:\Projects\H\module_7'):
         f'Родительская директория: {parent_dir}')
 
 # Вывод в консоль:
-# Обнаружен файл: ЧЕРНОВИК.py, Путь: D:\Projects\H\module_6\module_6.py, Размер: 3909 байт, 
+# Обнаружен файл: ЧЕРНОВИК.py, Путь: D:\Projects\H\module_6\module_6.py, Размер: 3909 байт,
 # Время изменения: 12.10.2024 18:41, Родительская директория: D:\Projects\H\module_7
